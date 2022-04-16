@@ -1,4 +1,4 @@
-package calculator
+package simple_calculator
 
 import "testing"
 
@@ -52,7 +52,7 @@ func TestDiscountCalculator(t *testing.T) {
 			// Arrange
 			calculator, err := NewDiscountCalculator(tc.minimumPurchaseAmount, tc.discount)
 			if err != nil {
-				t.Fatalf("Could not create the calculator %v\n", err) // It stops the test immediately
+				t.Fatalf("Could not create the simple_calculator %v\n", err) // It stops the test immediately
 			}
 
 			// Act
@@ -74,6 +74,6 @@ func TestDiscountCalculatorShouldFailWithZero(t *testing.T) {
 
 	// Assert
 	if err == nil {
-		t.Fatalf("Should not creat the calculator with zero purchase amount")
+		t.Fatalf("Should not creat the simple_calculator with zero purchase amount")
 	}
 }
